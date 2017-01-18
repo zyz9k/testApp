@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8AB4397-03DE-4A66-AF8E-1585780FE3A0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>testApp</RootNamespace>
+    <AssemblyName>testApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include=".editorconfig" />
+    <Content Include=".gitattributes" />
+    <Content Include=".github\CONTRIBUTING.md" />
+    <Content Include=".github\ISSUE_TEMPLATE.md" />
+    <Content Include=".github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include=".gitignore" />
+    <Content Include=".nvmrc" />
+    <Content Include=".travis.yml" />
+    <Content Include="dist\0.ea7974fc624c6533ee05.bundle.map" />
+    <Content Include="dist\1.940789efcd6dd08d23e7.bundle.map" />
+    <Content Include="dist\2.8f4a48aa484b9935d035.bundle.map" />
+    <Content Include="dist\4.f70d59c999c6f5667804.bundle.map" />
+    <Content Include="dist\5.a8a3e6eb1c77f2ac4adc.bundle.map" />
+    <Content Include="dist\assets\css\.gitkeep" />
+    <Content Include="dist\assets\data.json" />
+    <Content Include="dist\assets\manifest.json" />
+    <Content Include="dist\assets\mock-data\mock-data.json" />
+    <Content Include="dist\main.25236511bcd08e3b2da6.bundle.map" />
+    <Content Include="dist\polyfills.416e9ccf81c1cd6796c4.bundle.map" />
+    <Content Include="dist\polyfills.dll.js.map" />
+    <Content Include="dist\vendor.dll.js.map" />
+    <Content Include="dist\webpack-assets.json" />
+    <Content Include="dll\dll-bundles-state.json" />
+    <Content Include="dll\polyfills-manifest.json" />
+    <Content Include="dll\polyfills.dll.js.map" />
+    <Content Include="dll\vendor-manifest.json" />
+    <Content Include="dll\vendor.dll.js.map" />
+    <Content Include="Dockerfile" />
+    <Content Include="firebase.json" />
+    <Content Include="netlify.toml" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\assets\css\.gitkeep" />
+    <Content Include="src\assets\data.json" />
+    <Content Include="src\assets\manifest.json" />
+    <Content Include="src\assets\mock-data\mock-data.json" />
+    <Content Include="src\styles\styles.scss" />
+    <Content Include="src\styles\_variables.scss" />
+    <Content Include="stats.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tsconfig.webpack.json" />
+    <Content Include="tslint.json" />
+    <Content Include="typedoc.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\empty.js" />
+    <Content Include="config\github-deploy\index.js" />
+    <Content Include="config\head-config.common.js" />
+    <Content Include="config\helpers.js" />
+    <Content Include="config\html-elements-plugin\index.js" />
+    <Content Include="config\karma.conf.js" />
+    <Content Include="config\protractor.conf.js" />
+    <Content Include="config\resource-override.js" />
+    <Content Include="config\spec-bundle.js" />
+    <Content Include="config\webpack.common.js" />
+    <Content Include="config\webpack.dev.js" />
+    <Content Include="config\webpack.github-deploy.js" />
+    <Content Include="config\webpack.prod.js" />
+    <Content Include="config\webpack.test.js" />
+    <Content Include="dist\0.chunk.js" />
+    <Content Include="dist\0.ea7974fc624c6533ee05.chunk.js" />
+    <Content Include="dist\1.940789efcd6dd08d23e7.chunk.js" />
+    <Content Include="dist\1.chunk.js" />
+    <Content Include="dist\2.8f4a48aa484b9935d035.chunk.js" />
+    <Content Include="dist\2.chunk.js" />
+    <Content Include="dist\4.chunk.js" />
+    <Content Include="dist\4.f70d59c999c6f5667804.chunk.js" />
+    <Content Include="dist\5.a8a3e6eb1c77f2ac4adc.chunk.js" />
+    <Content Include="dist\5.chunk.js" />
+    <Content Include="dist\assets\humans.txt" />
+    <Content Include="dist\assets\icon\android-icon-144x144.png" />
+    <Content Include="dist\assets\icon\android-icon-192x192.png" />
+    <Content Include="dist\assets\icon\android-icon-36x36.png" />
+    <Content Include="dist\assets\icon\android-icon-48x48.png" />
+    <Content Include="dist\assets\icon\android-icon-72x72.png" />
+    <Content Include="dist\assets\icon\android-icon-96x96.png" />
+    <Content Include="dist\assets\icon\apple-icon-114x114.png" />
+    <Content Include="dist\assets\icon\apple-icon-120x120.png" />
+    <Content Include="dist\assets\icon\apple-icon-144x144.png" />
+    <Content Include="dist\assets\icon\apple-icon-152x152.png" />
+    <Content Include="dist\assets\icon\apple-icon-180x180.png" />
+    <Content Include="dist\assets\icon\apple-icon-57x57.png" />
+    <Content Include="dist\assets\icon\apple-icon-60x60.png" />
+    <Content Include="dist\assets\icon\apple-icon-72x72.png" />
+    <Content Include="dist\assets\icon\apple-icon-76x76.png" />
+    <Content Include="dist\assets\icon\apple-icon-precomposed.png" />
+    <Content Include="dist\assets\icon\apple-icon.png" />
+    <Content Include="dist\assets\icon\browserconfig.xml" />
+    <Content Include="dist\assets\icon\favicon-16x16.png" />
+    <Content Include="dist\assets\icon\favicon-32x32.png" />
+    <Content Include="dist\assets\icon\favicon-96x96.png" />
+    <Content Include="dist\assets\icon\favicon.ico" />
+    <Content Include="dist\assets\icon\ms-icon-144x144.png" />
+    <Content Include="dist\assets\icon\ms-icon-150x150.png" />
+    <Content Include="dist\assets\icon\ms-icon-310x310.png" />
+    <Content Include="dist\assets\icon\ms-icon-70x70.png" />
+    <Content Include="dist\assets\img\angular-logo.png" />
+    <Content Include="dist\assets\img\angularclass-avatar.png" />
+    <Content Include="dist\assets\img\angularclass-logo.png" />
+    <Content Include="dist\assets\robots.txt" />
+    <Content Include="dist\assets\service-worker.js" />
+    <Content Include="dist\humans.txt" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\main.25236511bcd08e3b2da6.bundle.js" />
+    <Content Include="dist\main.41d04e04d99bd9a48517dbb021dc5246.css" />
+    <Content Include="dist\main.bundle.js" />
+    <Content Include="dist\polyfills.416e9ccf81c1cd6796c4.bundle.js" />
+    <Content Include="dist\polyfills.bundle.js" />
+    <Content Include="dist\polyfills.dll.js" />
+    <Content Include="dist\robots.txt" />
+    <Content Include="dist\vendor.dll.js" />
+    <Content Include="dll\polyfills.dll.js" />
+    <Content Include="dll\vendor.dll.js" />
+    <Content Include="karma.conf.js" />
+    <Content Include="protractor.conf.js" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\home\home.component.css" />
+    <Content Include="src\app\home\home.component.html" />
+    <Content Include="src\assets\humans.txt" />
+    <Content Include="src\assets\icon\android-icon-144x144.png" />
+    <Content Include="src\assets\icon\android-icon-192x192.png" />
+    <Content Include="src\assets\icon\android-icon-36x36.png" />
+    <Content Include="src\assets\icon\android-icon-48x48.png" />
+    <Content Include="src\assets\icon\android-icon-72x72.png" />
+    <Content Include="src\assets\icon\android-icon-96x96.png" />
+    <Content Include="src\assets\icon\apple-icon-114x114.png" />
+    <Content Include="src\assets\icon\apple-icon-120x120.png" />
+    <Content Include="src\assets\icon\apple-icon-144x144.png" />
+    <Content Include="src\assets\icon\apple-icon-152x152.png" />
+    <Content Include="src\assets\icon\apple-icon-180x180.png" />
+    <Content Include="src\assets\icon\apple-icon-57x57.png" />
+    <Content Include="src\assets\icon\apple-icon-60x60.png" />
+    <Content Include="src\assets\icon\apple-icon-72x72.png" />
+    <Content Include="src\assets\icon\apple-icon-76x76.png" />
+    <Content Include="src\assets\icon\apple-icon-precomposed.png" />
+    <Content Include="src\assets\icon\apple-icon.png" />
+    <Content Include="src\assets\icon\browserconfig.xml" />
+    <Content Include="src\assets\icon\favicon-16x16.png" />
+    <Content Include="src\assets\icon\favicon-32x32.png" />
+    <Content Include="src\assets\icon\favicon-96x96.png" />
+    <Content Include="src\assets\icon\favicon.ico" />
+    <Content Include="src\assets\icon\ms-icon-144x144.png" />
+    <Content Include="src\assets\icon\ms-icon-150x150.png" />
+    <Content Include="src\assets\icon\ms-icon-310x310.png" />
+    <Content Include="src\assets\icon\ms-icon-70x70.png" />
+    <Content Include="src\assets\img\angular-logo.png" />
+    <Content Include="src\assets\img\angularclass-avatar.png" />
+    <Content Include="src\assets\img\angularclass-logo.png" />
+    <Content Include="src\assets\robots.txt" />
+    <Content Include="src\assets\service-worker.js" />
+    <Content Include="src\index.html" />
+    <Content Include="src\meta\humans.txt" />
+    <Content Include="src\meta\robots.txt" />
+    <Content Include="src\styles\headings.css" />
+    <Content Include="Web.config" />
+    <Content Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\+barrel\+child-barrel\child-barrel.component.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\+child-barrel\child-barrel.module.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\+child-barrel\child-barrel.routes.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\+child-barrel\index.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\barrel.component.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\barrel.module.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\barrel.routes.ts" />
+    <TypeScriptCompile Include="src\app\+barrel\index.ts" />
+    <TypeScriptCompile Include="src\app\+detail\+child-detail\child-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\+detail\+child-detail\child-detail.module.ts" />
+    <TypeScriptCompile Include="src\app\+detail\+child-detail\child-detail.routes.ts" />
+    <TypeScriptCompile Include="src\app\+detail\+child-detail\index.ts" />
+    <TypeScriptCompile Include="src\app\+detail\detail.component.ts" />
+    <TypeScriptCompile Include="src\app\+detail\detail.module.ts" />
+    <TypeScriptCompile Include="src\app\+detail\detail.routes.ts" />
+    <TypeScriptCompile Include="src\app\+detail\index.ts" />
+    <TypeScriptCompile Include="src\app\about\about.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\about\about.component.ts" />
+    <TypeScriptCompile Include="src\app\about\index.ts" />
+    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.e2e.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.resolver.ts" />
+    <TypeScriptCompile Include="src\app\app.routes.ts" />
+    <TypeScriptCompile Include="src\app\app.service.ts" />
+    <TypeScriptCompile Include="src\app\environment.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\home\home.e2e.ts" />
+    <TypeScriptCompile Include="src\app\home\index.ts" />
+    <TypeScriptCompile Include="src\app\home\title\index.ts" />
+    <TypeScriptCompile Include="src\app\home\title\title.service.spec.ts" />
+    <TypeScriptCompile Include="src\app\home\title\title.service.ts" />
+    <TypeScriptCompile Include="src\app\home\x-large\index.ts" />
+    <TypeScriptCompile Include="src\app\home\x-large\x-large.directive.spec.ts" />
+    <TypeScriptCompile Include="src\app\home\x-large\x-large.directive.ts" />
+    <TypeScriptCompile Include="src\app\index.ts" />
+    <TypeScriptCompile Include="src\app\no-content\index.ts" />
+    <TypeScriptCompile Include="src\app\no-content\no-content.component.ts" />
+    <TypeScriptCompile Include="src\custom-typings.d.ts" />
+    <TypeScriptCompile Include="src\main.browser.aot.ts" />
+    <TypeScriptCompile Include="src\main.browser.ts" />
+    <TypeScriptCompile Include="src\polyfills.browser.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53244</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53244/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
