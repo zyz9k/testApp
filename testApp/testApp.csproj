@@ -96,6 +96,75 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="doc\assets\css\main.css" />
+    <Content Include="doc\assets\images\icons%402x.png" />
+    <Content Include="doc\assets\images\icons.png" />
+    <Content Include="doc\assets\images\widgets%402x.png" />
+    <Content Include="doc\assets\images\widgets.png" />
+    <Content Include="doc\assets\js\main.js" />
+    <Content Include="doc\assets\js\search.js" />
+    <Content Include="doc\classes\_app_about_about_component_.aboutcomponent.html" />
+    <Content Include="doc\classes\_app_app_component_.appcomponent.html" />
+    <Content Include="doc\classes\_app_app_module_.appmodule.html" />
+    <Content Include="doc\classes\_app_app_resolver_.dataresolver.html" />
+    <Content Include="doc\classes\_app_app_service_.appstate.html" />
+    <Content Include="doc\classes\_app_home_home_component_.homecomponent.html" />
+    <Content Include="doc\classes\_app_home_title_title_service_.title.html" />
+    <Content Include="doc\classes\_app_home_x_large_x_large_directive_.xlargedirective.html" />
+    <Content Include="doc\classes\_app_no_content_no_content_component_.nocontentcomponent.html" />
+    <Content Include="doc\classes\_app__barrel_barrel_component_.barrelcomponent.html" />
+    <Content Include="doc\classes\_app__barrel_barrel_module_.barrelmodule.html" />
+    <Content Include="doc\classes\_app__barrel__child_barrel_child_barrel_component_.childbarrelcomponent.html" />
+    <Content Include="doc\classes\_app__barrel__child_barrel_child_barrel_module_.childbarrelmodule.html" />
+    <Content Include="doc\classes\_app__detail_detail_component_.detailcomponent.html" />
+    <Content Include="doc\classes\_app__detail_detail_module_.detailmodule.html" />
+    <Content Include="doc\classes\_app__detail__child_detail_child_detail_component_.childdetailcomponent.html" />
+    <Content Include="doc\classes\_app__detail__child_detail_child_detail_module_.childdetailmodule.html" />
+    <Content Include="doc\globals.html" />
+    <Content Include="doc\index.html" />
+    <Content Include="doc\modules\_app_about_about_component_.html" />
+    <Content Include="doc\modules\_app_about_about_component_spec_.html" />
+    <Content Include="doc\modules\_app_about_index_.html" />
+    <Content Include="doc\modules\_app_app_component_.html" />
+    <Content Include="doc\modules\_app_app_component_spec_.html" />
+    <Content Include="doc\modules\_app_app_e2e_.html" />
+    <Content Include="doc\modules\_app_app_module_.html" />
+    <Content Include="doc\modules\_app_app_resolver_.html" />
+    <Content Include="doc\modules\_app_app_routes_.html" />
+    <Content Include="doc\modules\_app_app_service_.html" />
+    <Content Include="doc\modules\_app_environment_.html" />
+    <Content Include="doc\modules\_app_home_home_component_.html" />
+    <Content Include="doc\modules\_app_home_home_component_spec_.html" />
+    <Content Include="doc\modules\_app_home_home_e2e_.html" />
+    <Content Include="doc\modules\_app_home_index_.html" />
+    <Content Include="doc\modules\_app_home_title_index_.html" />
+    <Content Include="doc\modules\_app_home_title_title_service_.html" />
+    <Content Include="doc\modules\_app_home_title_title_service_spec_.html" />
+    <Content Include="doc\modules\_app_home_x_large_index_.html" />
+    <Content Include="doc\modules\_app_home_x_large_x_large_directive_.html" />
+    <Content Include="doc\modules\_app_home_x_large_x_large_directive_spec_.html" />
+    <Content Include="doc\modules\_app_index_.html" />
+    <Content Include="doc\modules\_app_no_content_index_.html" />
+    <Content Include="doc\modules\_app_no_content_no_content_component_.html" />
+    <Content Include="doc\modules\_app__barrel_barrel_component_.html" />
+    <Content Include="doc\modules\_app__barrel_barrel_module_.html" />
+    <Content Include="doc\modules\_app__barrel_barrel_routes_.html" />
+    <Content Include="doc\modules\_app__barrel_index_.html" />
+    <Content Include="doc\modules\_app__barrel__child_barrel_child_barrel_component_.html" />
+    <Content Include="doc\modules\_app__barrel__child_barrel_child_barrel_module_.html" />
+    <Content Include="doc\modules\_app__barrel__child_barrel_child_barrel_routes_.html" />
+    <Content Include="doc\modules\_app__barrel__child_barrel_index_.html" />
+    <Content Include="doc\modules\_app__detail_detail_component_.html" />
+    <Content Include="doc\modules\_app__detail_detail_module_.html" />
+    <Content Include="doc\modules\_app__detail_detail_routes_.html" />
+    <Content Include="doc\modules\_app__detail_index_.html" />
+    <Content Include="doc\modules\_app__detail__child_detail_child_detail_component_.html" />
+    <Content Include="doc\modules\_app__detail__child_detail_child_detail_module_.html" />
+    <Content Include="doc\modules\_app__detail__child_detail_child_detail_routes_.html" />
+    <Content Include="doc\modules\_app__detail__child_detail_index_.html" />
+    <Content Include="doc\modules\_main_browser_.html" />
+    <Content Include="doc\modules\_main_browser_aot_.html" />
+    <Content Include="doc\modules\_polyfills_browser_.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -143,6 +212,8 @@
     <Content Include="tsconfig.webpack.json" />
     <Content Include="tslint.json" />
     <Content Include="typedoc.json" />
+    <Content Include="doc\assets\css\main.css.map" />
+    <Content Include="src\app\api\ping.template.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -222,7 +293,7 @@
     <Content Include="karma.conf.js" />
     <Content Include="protractor.conf.js" />
     <Content Include="src\app\app.component.css" />
-    <Content Include="src\app\home\home.component.css" />
+    <None Include="src\app\home\home.component.scss" />
     <Content Include="src\app\home\home.component.html" />
     <Content Include="src\assets\humans.txt" />
     <Content Include="src\assets\icon\android-icon-144x144.png" />
@@ -286,6 +357,9 @@
     <TypeScriptCompile Include="src\app\about\about.component.spec.ts" />
     <TypeScriptCompile Include="src\app\about\about.component.ts" />
     <TypeScriptCompile Include="src\app\about\index.ts" />
+    <TypeScriptCompile Include="src\app\api\auth.config.ts" />
+    <TypeScriptCompile Include="src\app\api\auth.service.ts" />
+    <TypeScriptCompile Include="src\app\api\ping.component.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.e2e.ts" />
@@ -315,6 +389,10 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

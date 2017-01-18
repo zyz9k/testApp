@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { AppState } from './app.service';
 
+import { Auth } from './api/auth.service';
 /*
  * App Component
  * Top Level Component
@@ -15,6 +16,7 @@ import { AppState } from './app.service';
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
+  providers : [ Auth ],
   styleUrls: [
     './app.component.css'
   ],
@@ -35,22 +37,22 @@ import { AppState } from './app.service';
       <a [routerLink]=" ['./about'] " routerLinkActive="active">
         About
       </a>
+      <a [routerLink]=" ['./ping'] " routerLinkActive="active">
+        Ping
+      </a>
     </nav>
-
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Auth0 - Angular 2</a>
+          <button class="btn btn-primary btn-margin" (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</button>
+          <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+        </div>
+      </div>
+    </nav>
     <main>
       <router-outlet></router-outlet>
     </main>
-
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
-    <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
-      <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
-      </div>
-    </footer>
   `
 })
 export class AppComponent implements OnInit {
@@ -59,7 +61,8 @@ export class AppComponent implements OnInit {
   public url = 'https://twitter.com/AngularClass';
 
   constructor(
-    public appState: AppState
+      public appState: AppState,
+      private auth: Auth
   ) {}
 
   public ngOnInit() {
